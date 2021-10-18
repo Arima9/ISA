@@ -14,8 +14,7 @@ def module3(nombre,parameters):
     f_out = open(nombre, "w")
     for combinacion in range(len(parameters)):
         print(parameters[combinacion])
-        f_out.write(parameters[combinacion])
-
+        f_out.write(parameters[combinacion+ '\n'])
     f_out.close()
     
 if __name__ == "__main__":    
