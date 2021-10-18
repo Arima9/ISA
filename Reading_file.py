@@ -9,16 +9,18 @@
     codigo2.txt, codigo3.txt, codigo4.txt) and returns a tupple with the 
     content of  the file read.
 """
-def lectura_archivo(nombre):
-    #Module that returns a list with all the arguments of a file"
 
-    nombre_archivo = nombre      #File that we want to read"
-    valores = open(nombre_archivo)
+#Function that read the file and return a list with the lines
+def readfile(nombre):
+    #Opens the file with the name nombre and stores it in valores
+    valores = open(nombre)
+    #Reads the lines and stores them in lineas
     lineas = valores.readlines()
+    #Eliminates the jump line character from the end of each line.
     lineas = list(map(lambda l: l.rstrip('\n'), lineas))
+    #Return the list with the code.
     return lineas
 
+#Test block of code
 if __name__ == "__main__":
-
-    print(lectura_archivo("codigo1.txt"))
-
+    print(readfile("codigo1.txt"))
