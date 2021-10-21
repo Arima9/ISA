@@ -4,9 +4,9 @@
 # :indentSize=4:tabSize=8:noTabs=true:
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
-""" 
+"""
     This program reads a file that the user want to transform (codigo1.txt,
-    codigo2.txt, codigo3.txt, codigo4.txt) and returns a tupple with the 
+    codigo2.txt, codigo3.txt, codigo4.txt) and returns a tupple with the
     content of  the file read.
 """
 

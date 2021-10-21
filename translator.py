@@ -106,7 +106,9 @@ def translate(code: list):
             #If equal to lb or sb instruction, off2 pattern is added.
             elif codet[0] in [11, 13]:
                 corris = ORDER_APPEND["off2"]
-                REGS["C2"] = (labels.get(instr[2]) - prog_counter) & (2**8-1)
+                REGS["C2"] = eval(instr[2])
+                if REGS["C2"] < 0:
+                    REGS["C2"] = REGS["C2"] & (2**8-1)
                 instr[2] = "C2"
             #If equal to addi or andi instruction, imm0 pattern is added.
             elif codet[0] in [1, 3]:

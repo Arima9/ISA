@@ -5,13 +5,13 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
-""" 
+"""
     This module is going to write a file with the content of the module 2 and
     save it with the name given on the command line when running the executable
     main program.
 """
 def write_to(nombre: str, code_list: list, ftype: str):
-    
+
     #First checks the extension of the file to decide wich mode use, txt or bin
     if '.txt' in ftype:
         #Open the file with the name stored in nombre in write mode
@@ -30,7 +30,7 @@ def write_to(nombre: str, code_list: list, ftype: str):
         #Creates a empty list to store the values that are going to be writen
         #into the file
         values = []
-        
+
         #Iterates the lines of the list code_list
         for line in code_list:
 
@@ -70,11 +70,11 @@ def write_to(nombre: str, code_list: list, ftype: str):
         f_out.close()
 
 #Block of code that executes a test of the module.
-if __name__ == "__main__":    
-    codigo = 'codigo1pru.txt'
-    lista = ["000010101011110100", "000101100001001101","110101011100000011"] 
-    write_to(codigo, lista, '.txt')
-    
-    codigo2 = 'codigo1pru.bin'
-    lista = ["000010101011110100", "000101100001001101","110101011100000011"] 
-    write_to(codigo2, lista, '.bin')
+if __name__ == "__main__":
+    CODIGO = 'codigo1pru.txt'
+    LISTA = ["000010101011110100", "000101100001001101", "110101011100000011"]
+    write_to(CODIGO, LISTA, '.txt')
+
+    CODIGO2 = 'codigo1pru.bin'
+    LISTA = ["000010101011110100", "000101100001001101", "110101011100000011"]
+    write_to(CODIGO2, LISTA, '.bin')
